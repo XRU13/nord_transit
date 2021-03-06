@@ -13,13 +13,6 @@ body
   background: url('') repeat top left;
 }
 
-h1
-{
-  font-size: 20px;
-  font-weight: normal;
-  color: #2e6e80;
-  text-align: center;
-}
 
 /**
   * important: keep position fixed, you can however use top:0 instead of bottom:0
@@ -29,7 +22,7 @@ h1
 {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0px;
 }
 
 /**
@@ -48,10 +41,3 @@ h1
   width: 4000px;
 }
 
-.front
-{
-  z-index: 100;
-  width: 6000px;
-  top: 67px;
-  background: linear-gradient(to top, #3F6983, #0e1736);
-}

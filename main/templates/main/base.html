@@ -3,69 +3,69 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-	<!--<link rel="stylesheet" href="{% static 'main/css/example.css' %}">-->
+	<link rel="stylesheet" href="{% static 'main/css/example.css' %}">
 	<script src="{% static 'main/js/jquery.min.js' %}"></script>
 	<script src="{% static 'main/js/jquery.jInvertScroll.js' %}"></script>
-
 </head>
 <body>
 <div class="wrapper">
-<header class="header">
-	<div class="header__ico"><a href="#"><img src="{% static 'main/img/logo.png'%}" alt="logo"></a></div>
-	<div class="header__body">
-		<div class="header__logo">Nord Trasit</div>
-		<div class="header__lang"><a href=""><img src="{% static 'main/img/eng.png'%}" alt="ru"></a><a href=""><img src="{% static 'main/img/eng.png'%}" alt="eng"></a></div>
-	</div>
-</header>
-<div class="section">
-	<aside>
-		<img src="{% static 'main/img/615.png'%}" alt="ru">
-	</aside>
-	<main>
-		{% block content %}
-		{% endblock %}
-	</main>
-</div>
-<footer class="footer">
-	<div class="footer__body">
-		<div class="footer__left">
-			<div class="footer__ico">
-				<a href=""><img src="{% static 'main/img/eng.png'%}" alt="ru"></a>
-				<a href=""><img src="{% static 'main/img/eng.png'%}" alt="ru"></a>
-				<a href=""><img src="{% static 'main/img/eng.png'%}" alt="ru"></a>
-			</div>
-			<div class="footer__logo">
-				<span>Nord Transit LLC</span>
-			</div>
-			<div class="footer__text">
-				<span>Obruchev street 38 - 95, Pevek 689400 / Chaunskiy region, Chukotka Autonomus / Okrug, Russia</span>
-			</div>
-		</div>
-		<div class="footer__right">
-			<div class="footer__btn">
-				<div class="footer__toggle">
-					<div class="footer__toggle-item item-1">
-						<input id="fid-1" type="radio" name="radio" value="off" checked>
-						<label for="fid-1">Darck</label>
+	<div class="page">
+		<div class="page__wrapper">
+			<header class="header">
+				<div class="header__ico"><img src="{% static 'main/img/logo.png'%}" alt="logo"></div>
+				<div class="header__body">
+					<div class="header__logo">Nord Trasit</div>
+					<div class="header__lang">
+						<a href=""><img src="{% static 'main/img/ru.svg'%}" alt="ru"></a>
+						<a href=""><img src="{% static 'main/img/en.svg'%}" alt="eng"></a>
 					</div>
-					<div class="footer__toggle-item item-2">
-						<input id="fid-2" type="radio" name="radio" value="on">
-						<label for="fid-2">Light</label>
+				</div>
+			</header>
+			<div class="section">
+				{% block content %}
+				{% endblock %}
+			</div>
+			<footer class="footer">
+				<div class="footer__body">
+					<div class="footer__left">
+						<div class="footer__ico">
+							<a href=""><img src="{% static 'main/img/fb.svg'%}" alt="fb"></a>
+							<a href=""><img src="{% static 'main/img/tw.svg'%}" alt="tw"></a>
+							<a href=""><img src="{% static 'main/img/inst.svg'%}" alt="in"></a>
+						</div>
+						<div class="footer__logo">
+							<span>Nord Transit LLC</span>
+						</div>
+						<div class="footer__text">
+							<span>Obruchev street 38 - 95, Pevek 689400 / Chaunskiy region, Chukotka Autonomus / Okrug, Russia</span>
+						</div>
 					</div>
-				</div>	
-			</div>
-			<div class="footer__btn-next">
-				<a href=""><img src="{% static 'main/img/eng.png'%}" alt="ru"></a>
-			</div>
-			<div class="footer__mail"><a href="mailto:logistic@nordtransit.ru">LOGISTICS@NORDTRANSIT.RU</a></div>
+					<div class="footer__right">
+						<div class="footer__btn">
+							<div class="footer__toggle">
+								<div class="footer__toggle-item item-1">
+									<input id="fid-1" type="radio" name="radio" value="off" checked>
+									<label for="fid-1">Darck</label>
+								</div>
+								<div class="footer__toggle-item item-2">
+									<input id="fid-2" type="radio" name="radio" value="on">
+									<label for="fid-2">Light</label>
+								</div>
+							</div>	
+						</div>
+						<div class="footer__btn-next">
+							<img src="{% static 'main/img/arrow.svg'%}" alt="ru">
+						</div>
+						<div class="footer__mail"><a href="mailto:logistic@nordtransit.ru">LOGISTICS@NORDTRANSIT.RU</a></div>
+					</div>
+				</div>
+			</footer>
 		</div>
 	</div>
-</footer>
 </div>
 </body>
 </html>

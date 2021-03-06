@@ -63,21 +63,36 @@ body {
 	height: 100%;
 	background-color: #ffffff;
 	color: #000000;
-	font-size: 24px;
+	font-size: 18px;
 	font-family: HelveticaNeueCyr, sans-serif;
 }
 
 /* Стили */
 
+::-webkit-scrollbar {
+	width: 0;
+  }
 .wrapper {
-	min-height: 100vh;
+	height: 100%;
+	border: #000000 2px solid;
+}
+.page {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+.page__wrapper {
 	display: flex;
 	flex-direction: column;
-	border: 2px #000000 solid;
+	width: 100%;
+	height: 100%;
 }
 .header {
 	display: flex;
-	height: 94px;
+	height: 54px;
 }
 .header__body {
 	display: flex;
@@ -87,43 +102,39 @@ body {
 	padding: 0 29px;
 }
 .header__logo {
-	font-size: 38px;
+	font-size: 22px;
 	color: #000000;
 }
 .header__lang {
 	display: flex;
 	justify-content: space-between;
-	width: 116px;
+	width: 66px;
+	height: 29px;
+}
+.header__lang img {
+	max-height: 100%;
 }
 .header__ico {
-
+	display: flex;
+	width: 54px;
+}
+.header__ico img {
+	max-width: 100%;
 }
 .section {
 	display: flex;
 	flex: 1 1 auto;
 	border-bottom: solid 2px #000000;
 	border-top: solid 2px #000000;
-}
-aside {
-	min-height: 100%;
-	padding: 46px;
-	width: 700px;
-	border-right: #000000 solid 2px;
-	z-index: 2000;
-}
-aside img {
-	min-height: 100%;
-	width: 100%;
-}
-main {
-	position: relative;
+	overflow: hidden;
+	margin-bottom: -2px;
 }
 .footer {
-	height: 94px;
+	height: 54px;
 }
 .footer__body {
 	display: flex;
-	padding: 22px 19px;
+	padding: 13px 11px;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -131,13 +142,13 @@ main {
 	display: flex;
 }
 .footer__ico {
-	margin-right: 40px;
-	display: flex;
-    align-items: center;
+	height: 29px;
+	margin-right: 23px;
 }
-.footer__ico a {
-	margin-right: 17px;
+.footer__ico img {
+	max-height: 100%;
 }
+
 .footer__ico a:last-child {
 	margin-right: 0;
 }
@@ -147,26 +158,34 @@ main {
 	margin-right: 38px;
 }
 .footer__logo>span {
-	font-size: 18px;
-	line-height: 18px;
+	font-size: 10px;
+	line-height: 1;
 }
 .footer__text {
 	display: flex;
 	align-items: center;
 }
 .footer__text>span {
-	font-size: 18px;
+	font-size: 10px;
 	line-height: 18px;
 }
 .footer__right {
 	display: flex;
-	align-items: center;
 	margin: 0 -12px;
 }
 .footer__btn {
 	display: flex;
 	align-items: center;
 	padding: 0 12px;
+}
+.footer__btn-next {
+	height: 29px;
+}
+.footer__btn-next img {
+	max-height: 100%;
+}
+.footer__mail a {
+	font-size: 10px;
 }
 .footer__toggle {
 	display: inline-block;
@@ -181,8 +200,9 @@ main {
 }
 .footer__toggle-item label {
 	display: inline-block;
-	padding: 0px 17px;   
-	line-height: 45px;
+	padding: 0px 9px;
+	font-size: 12px;
+	line-height: 26px;
 	border: 2px solid #000000;
 	border-right: none;
 	cursor: pointer;
@@ -206,55 +226,51 @@ main {
 	color: #ffffff;
 }
 
-.footer__btn-next {
-	padding: 0 12px;
-}
 .footer__mail a {
 	color: #000000;
 	text-decoration: underline;
 	padding: 0 12px;
 }
 .container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 	display: flex;
-	min-height: 100%;
 }
+.block__wrapper {
+	display: flex;
+	position: relative;
+	width: 100%;
+}
+.block__left {
+	border-right: 2px #000000 solid;
+	max-width: 400px;
+	padding: 26px;
+	height: 100%;
+	display: flex;
+}
+.block__left img {
+	width: 100%;
+	height: 100%;
+}
+.block__scroll {
+	width: 6000px;
+	top: 0px;
+	display: flex;
+  }
+
 .block__info {
-	flex-basis: 50%;
-	padding: 46px;
-	border-right: #000000 solid 2px;
 	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
+	border-right: 2px solid #000000;
+	width: 666px;
+	flex: 0 1 auto;
 }
-.block__top-title h1 {
-	font-size: 200px;
-	line-height: 1;
-	margin-bottom: 80px;
+.block__top {
+	padding: 26px;
 }
-.block__top-subtitle p {
-	font-size: 26px;
-	margin-bottom: 40px;
+.block__top-title {
+	font-size: 115px;
 }
-.block__top-btn {
-	display: flex;
-	align-items: center;
-}
-.block__top-btn a {
-	margin-right: 19px;
-}
-.block__top-btn p {
-	font-size: 18px;
-}
-.block__bottom-title {
-	margin-bottom: 52px;
-}
-.block__bottom-title p {
-	font-size: 18px;
-}
-.block__bottom-video {
-	height: 560px;
-	background-color:lightskyblue;
-}
-.block__body {
-	flex-basis: 50%;
+.block__top-subtitle {
+
 }
